@@ -1,0 +1,20 @@
+@mixin flex($justifyContent, $alignItems, $flexDirection) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection; 
+}
+
+@mixin button($backgroundColor, $color, $bgColorHover, $borderRadius, $fontSize, $width, $height) {
+    background-color: $backgroundColor;
+    color: $color;
+    border-radius: $borderRadius;
+    font-size: $fontSize;
+    width: $width;
+    height: $height;
+    &:hover {
+        background: $bgColorHover;
+        color: $color;
+    }
+}

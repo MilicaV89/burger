@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Calistoga&family=Montserrat:wght@400;700&family=Nunito:wght@400;600&family=Poppins:wght@600&display=swap');
+@import 'vars';
+@import 'mixins';
+@import 'basic';
+
+.main-menu {
+    padding: 56px 110px 103px 80px;
+    font-family: $fontToolbar;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, #000000 100%),url(../dizajn/pic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 1245px) {
+        background-position: center;
+    }
+    @media (max-width: 870px) {
+        background-position: center;
+        padding: 20px;
+    }
+    &__head {
+        @include flex(space-between, center, row); 
+    }
+    &__logo {
+        @media (max-width: 1245px) {
+            text-align: center center;
+        }
+        @media (max-width: 870px) {
+            text-align: center center;
+            width: 50%;
+        }
+    }
+    &__nav {
+        @include flex(space-between, center, row);
+        @media (max-width: 1245px) {
+            width: 100%;
+            left: 0;
+            right: 0;
+            @include flex(space-between, center, column);
+            padding: 30px 0;
+            &.showNav {
+                display: none;
+            }
+        }
+    }
+    &__list {
+        @include flex(space-between, center, row);
+        @media (max-width: 1245px) {
+            display: none;
+            @include flex(space-between, center, column);
+        }
+    }
+    &__item {
+        padding-left: 71px;
+    }
+    &__link {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 25px;
+        transition: $transition;
+        cursor: pointer;
+        &:hover {
+            color: $red;
+        }
+    }
+    &__burger {
+        width: 25px;
+        height: 20px;
+        @include flex(space-between, center, column);
+        cursor: pointer;
+        display: none;
+        position: fixed;
+        @media (max-width: 1245px) {
+            display: flex;
+            top: 70px;
+            right: 70px;
+        }
+        @media (max-width: 870px) {
+            display: flex;
+            top: 30px;
+            right: 30px;
+        }
+    }
+    &__span {
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        display: none;
+        @media (max-width: 1245px) {
+            display: inline;
+        }
+    }
+    &__info {
+        max-width: 610px;
+    }
+    &__h1 {
+        font-size: 91px;
+        color: $white;
+        font-family: $fontTitle;
+        padding-top: 100px;
+        @media (max-width: 870px) {
+            font-size: 50px;
+        }
+        @media (max-width: 480px) {
+            font-size: 20px;
+        }
+    }
+    &__text {
+        font-size: 32px;
+        color: $white;
+        font-family: $fontText;
+        font-weight: 400;
+        padding-top: 45px;
+        padding-bottom: 55px;
+        @media (max-width: 870px) {
+            font-size: 20px;
+        }
+        @media (max-width: 480px) {
+            font-size: 15px;
+        }
+    }
+    &__btn {
+        @include button($red, $white, #000000, 32px, 25px, 322px, 65px);
+        text-transform: uppercase;
+        transition: $transition;
+        border: none;
+        &:hover {
+            color: $red;
+        }
+        @media (max-width: 870px) {
+            font-size: 20px;
+            width: 160px;
+            height: 40px;
+        }
+    }
+}
+.info {
+
+    background: url(../dizajn/vso1.png), #f5eddf;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__h2 {
+        font-size: 64px;
+        color: $red;
+        font-family: $fontTitle;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 92px;
+    }
+    &__text {
+        font-size: 25px;
+        text-align: center;
+        color: $red;
+        font-family: $fontBtnT;
+        font-weight: 400;
+        padding-top: 52px;
+        padding-bottom: 73px;
+    }
+    &__chef {
+        @include flex(space-between, center, row);
+        padding-bottom: 146px;
+        @media (max-width: 1050px) {
+            @include flex(space-between, center, column);
+            margin: 0 auto;
+        }
+    }
+    &__name {
+        @include flex(space-between, center, column);
+    }
+    &__img {
+        border-radius: 50%;
+        @media (max-width: 475px) {
+            width: 50%;
+        }
+    }
+    &__h4 {
+        font-size: 33px;
+        color: $red;
+        font-family: $fontTitle;
+        text-align: center;
+        padding-top: 23px;
+        padding-bottom: 28px;
+        text-transform: uppercase;
+    }
+    &__text1 {
+        font-size: 25px;
+        color: $red;
+        font-family: $fontText;
+        font-weight: 600;
+        text-transform: capitalize;
+        @media (max-width: 1050px) {
+            padding-bottom: 20px;
+        }
+    }
+}
+.best {
+    background: $red;
+    .wraper {
+        padding-top: 167px;
+        padding-bottom: 149px;
+        @include flex(space-between, center, row);
+        @media (max-width:1050px) {
+            @include flex(space-between, center, column);
+            margin: 0 auto;
+        }
+        @media (max-width: 475px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__img {
+        @media (max-width: 500px) {
+            width: 50%;
+        }
+    }
+    &__burger {
+        max-width: 544px;
+        @media (max-width: 1020px) {
+            text-align: center;
+        }
+    }
+    &__h2 {
+        font-size: 75px;
+        color: $white;
+        font-family: $fontTitle;
+        text-transform: capitalize;
+        @media (max-width: 1020px) {
+            margin-top: 20px;
+        }
+        @media (max-width: 475px) {
+            font-size: 50px;
+            margin-top: 20px;
+        }
+    }
+    &__text {
+        font-size: 30px;
+        color: $white;
+        font-family: $fontText;
+        font-weight: 400;
+        padding-top: 43px;
+        padding-bottom: 72px;
+        @media (max-width: 1020px) {
+            max-width: 432px;
+        }
+        @media (max-width: 475px) {
+            font-size: 24px;
+        }
+    }
+    &__btn {
+        @include button($white, $red, #000000, 32px, 25px, 322px, 65px);
+        text-transform: uppercase;
+        border: none;
+        @media (max-width: 475px) {
+            @include button($white, $red, #000000, 32px, 24px, 150px, 65px);
+        }
+    }
+}
+.big {
+    background: url(../dizajn/vso2.png), #f5eddf;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .wraper {
+        @include flex(space-between, center, row);
+        padding-top: 178px;
+        padding-bottom: 146px;
+        @media (max-width:1050px) {
+            @include flex(space-between, center, column);
+            margin: 0 auto;
+        }
+    }
+    &__burger {
+        max-width: 1170px;
+        @media (max-width: 1020px) {
+            text-align: center;
+        }
+    }
+    &__h2 {
+        font-family: $fontTitle;
+        font-size: 75px;
+        color: $red;
+        text-transform: capitalize;
+        @media (max-width: 475px) {
+            font-size: 50px;
+        }
+    }
+    &__text {
+        font-size: 30px;
+        color: $red;
+        font-family: $fontBtnT;
+        font-weight: 400;
+        padding-top: 45px;
+        padding-bottom: 70px;
+        max-width: 571px;
+        @media (max-width: 1020px) {
+            max-width: 432px;
+        }
+        @media (max-width: 475px) {
+            font-size: 24px;
+        }
+    }
+    &__btn {
+        @include button($red, $white, #000000, 32px, 25px, 322px, 65px);
+        text-transform: uppercase;
+        border: none;
+        @media (max-width: 1020px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 475px) {
+            @include button($red, $white, #000000, 32px, 24px, 150px, 65px);
+            margin-bottom: 20px;
+        }
+    }
+    &__img {
+        @media (max-width: 500px) {
+            width: 50%;
+        }
+    }
+}
+.statistics {
+    background: $red;
+    .wraper {
+        padding-top: 95px;
+        padding-bottom: 181px;
+    }
+    &__h2 {
+        font-family: $fontTitle;
+        font-size: 62px;
+        text-align: center;
+        color: $white;
+        text-transform: capitalize;
+        @media (max-width: 475px) {
+            font-size: 31px;
+        }
+    }
+    &__text1 {
+        max-width: 685px;
+        padding-bottom: 63px;
+        padding-top: 45px;
+        font-family: $fontBtnT;
+        font-size: 25px;
+        color: $white;
+        font-weight: 400;
+        text-align: center;
+        margin: 0 auto;
+        @media (max-width: 475px) {
+         font-size: 15px;   
+        }
+    }
+    &__numbers {
+        @include flex(space-between, center, row);
+        @media (max-width: 1245px) {
+            @include flex(space-between, center, column);
+            margin: 0 auto;
+        }
+    }
+    &__container {
+        width: 310px;
+        height: 310px;
+        border-radius: 155px;
+        background-color: $red;
+        border: 5px solid $white;
+        @media (max-width: 475px) {
+            width: 160px;
+            height: 160px;
+        }
+    }
+    &__value {
+        font-size: 102px;
+        color: $white;
+        font-family: $fontTitle;
+        text-align: center;
+        padding-top: 80px;
+        @media (max-width: 475px) {
+            font-size: 50px;
+            padding-top:40px;  
+        }
+    }
+    &__text {
+        font-size: 33px;
+        color: $white;
+        font-weight: 700;
+        font-family: $fontBtnT;
+        text-align: center;
+        @media (max-width: 475px) {
+            font-size: 16px;
+        }
+    }
+}
+.pack {
+    background: url(../dizajn/vso3.png), #f6eedf;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__h3 {
+        font-family: $fontTitle;
+        font-size: 75px;
+        text-align: center;
+        text-transform: capitalize;
+        color: $red;
+        padding-bottom: 141px;
+        padding-top: 92px;
+        @media (max-width: 1020px) {
+            font-size: 40px;
+        }
+    }
+    &__menu {
+        @include flex(space-between, center, row);
+        padding-bottom: 75px;
+        @media (max-width: 780px) {
+            @include flex(space-between, center, column);
+            margin: 0 auto;
+        }
+    }
+    &__offer {
+        background: $white;
+        max-width: 30%;
+        @include flex(space-between, center, column);
+        border-radius: 8px;
+        @media (max-width: 1020px) {
+            margin-bottom: 20px;
+            max-width: 70%;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+    }
+    &__head {
+        font-family: $fontTitle;
+        font-size: 33px;
+        color: $red;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 40px;
+        padding-top: 32px;
+        @media (max-width: 767px) {
+            font-size: 24px;  
+        }
+        @media (max-width: 620px) {
+            font-size: 15px;
+        }
+    }
+    &__img {
+        @media (max-width: 620px) {
+            width: 50%;
+        }
+    }
+    &__price {
+        font-family: $fontTitle;
+        font-size: 33px;
+        text-align: center;
+        color: $red;
+        padding-top: 42px;
+        @media (max-width: 767px) {
+            font-size: 24px;   
+        }
+        @media (max-width: 620px) {
+            font-size: 15px;
+        }
+    }
+    &__text {
+        font-family: $fontBtnT;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        color: $red;
+        padding: 28px 27px;
+    }
+    &__btn {
+        @include button($red, $white, #000000, 29px, 23px, 291px, 59px);
+        text-transform: uppercase;
+        border: none;
+        margin-bottom: 24px;
+        @media (max-width: 1020px) {
+            @include button($red, $white, #000000, 29px, 15px, 150px, 59px)
+        }
+        @media (max-width: 767px) {
+            @include button($red, $white, #000000, 29px, 15px, 100px, 59px);
+        }
+    }
+}
+.author {
+    background: linear-gradient(rgba(245, 75, 60, 50%), rgba(245, 75, 60, 50%)), url(../dizajn/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 295px 369px 264px 366px;
+    @media (max-width: 1385px) {
+        padding: 150px 200px;
+    }
+    @media (max-width: 960px) {
+        padding: 20px 50px;
+    }
+    &__text {
+        font-family: $fontTitle;
+        font-size: 36px;
+        color: $white;
+        text-align: center;
+        padding-bottom: 85px;
+        @media (max-width: 1385px) {
+            padding: 20px 50px;
+            font-size: 30px;
+        }
+        @media (max-width: 870px) {
+            padding: 20px 50px;
+            font-size: 20px;
+        }
+    }
+    &__name {
+        font-family: $fontName;
+        color: $white;
+        font-size: 45px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+.update {
+    background: url(../dizajn/vso4.png), #f6eedf;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__h2 {
+        font-family: $fontTitle;
+        font-size: 75px;
+        color: $red;
+        text-align: center;
+        text-transform: capitalize;
+        padding-top: 232px;
+        @media (max-width: 800px) {
+            font-size: 50px;
+        }
+    }
+    &__text {
+        font-family: $fontText;
+        font-weight: 400;
+        font-size: 30px;
+        color: $red;
+        text-align: center;
+        max-width: 726px;
+        padding-top: 46px;
+        padding-bottom: 86px;
+        margin: 0 auto;
+        @media (max-width: 500px) {
+            font-size: 20px;
+        }
+    }
+    &__form {
+        position: relative;
+        text-align: center;
+        padding-bottom: 244px;
+        @media (max-width: 470px) {
+            @include flex(space-between, center, column);
+        }
+    }
+    &__input {
+        background: $white;
+        width: 549px;
+        height: 63px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border: none;
+        font-size: 25px;
+        color: #835e3f;
+        font-family: $fontText;
+        font-weight: 400;
+        padding-left: 37px;
+        @media (max-width: 768px) {
+            width: 250px;
+        }
+        @media (max-width: 470px) {
+            width: 222px;
+            border-radius: 30px;
+        }
+    }
+    &__btn {
+        font-family: $fontText;
+        font-weight: 400;
+        color: $white;
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        background: $red;
+        width: 222px;
+        height: 65px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border: none;
+        margin-left: -10px;
+        &:hover {
+            background: $white;
+            color: $red;
+        }
+        @media (max-width: 470px) {
+            width: 222px;
+            border-radius: 30px;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+    }
+}
+.footer {
+    color: $white;
+    background: #222222;
+    .wraper {
+        @include flex(space-between, flex-start, row);
+        padding-top: 232px;
+        padding-bottom: 290px;
+        @media (max-width: 1100px) {
+            @include flex(space-between, flex-start, column);
+            padding-top: 100px;
+            padding-bottom: 150px;
+        }
+        }
+    &__media {
+        max-width: 444px;
+    }
+    &__title {
+        max-width: 194px;
+        font-size: 31px;
+        font-family: $fontTitle;
+        color: $white;
+        text-transform: capitalize;
+    }
+    &__item1 {
+        font-size: 24px;
+        font-family: $fontText;
+        font-weight: 400;
+        padding-bottom: 34px;
+        padding-top: 35px;
+    }
+    &__column {
+        @media (max-width: 1100px) {
+            margin-top: 40px;
+        }
+    }
+    &__icon {
+        padding-right: 14px;
+    }
+    &__link1 {
+        color: $white;
+    }
+    &__link {
+        color: $white;
+        font-family: $fontText;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 42px;
+        text-transform: capitalize;
+    }
+}
